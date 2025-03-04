@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --border-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    padding: 0;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper */
+body {
+    padding: 40px;
+    background-color: white;
+}
+
+/* Header */
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Section headers */
+h2 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin: 25px 0 15px 0;
+    padding-left: 12px;
+    border-left: 4px solid var(--secondary-color);
+    background-color: rgba(52, 152, 219, 0.05);
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Personal information */
+p {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+p::before {
+    content: "•";
+    position: absolute;
+    left: 5px;
+    color: var(--secondary-color);
+}
+
+/* Email link */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+        padding: 6px 10px;
+    }
+    
+    p {
+        font-size: 0.95rem;
+        padding-left: 15px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        padding: 0;
+        background-color: white;
+        box-shadow: none;
+        font-size: 12pt;
+    }
+    
+    h1 {
+        font-size: 18pt;
+    }
+    
+    h2 {
+        font-size: 14pt;
+    }
+    
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+    
+    p::before {
+        color: #000;
+    }
+}
